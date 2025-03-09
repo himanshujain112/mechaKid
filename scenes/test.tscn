@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://rjsni27uivko"]
+[gd_scene load_steps=5 format=3 uid="uid://rjsni27uivko"]
 
 [ext_resource type="PackedScene" uid="uid://chey1167egaof" path="res://scenes/player.tscn" id="1_13pqb"]
+[ext_resource type="PackedScene" uid="uid://dk2xtcaijtf82" path="res://scenes/enemy/spider.tscn" id="2_ah6u5"]
+[ext_resource type="PackedScene" uid="uid://3fg5uy42wxj5" path="res://scenes/enemy/drone.tscn" id="3_3kn88"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iaotu"]
 
@@ -13,3 +15,9 @@ position = Vector2(91, 275)
 shape = SubResource("WorldBoundaryShape2D_iaotu")
 
 [node name="player" parent="." instance=ExtResource("1_13pqb")]
+
+[node name="spider" parent="." instance=ExtResource("2_ah6u5")]
+position = Vector2(383, 76)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("3_3kn88")]
+position = Vector2(467, 76)
