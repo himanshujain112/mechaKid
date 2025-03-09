@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://ca126iis3dqgs"]
+
+[ext_resource type="Texture2D" uid="uid://dk00mmrrkgwhy" path="res://assets/powerStation/4 Animated objects/Money.png" id="1_dw8em"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghkou"]
+atlas = ExtResource("1_dw8em")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkawy"]
+atlas = ExtResource("1_dw8em")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcmmn"]
+atlas = ExtResource("1_dw8em")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aoivm"]
+atlas = ExtResource("1_dw8em")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75rrw"]
+atlas = ExtResource("1_dw8em")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dc3y"]
+atlas = ExtResource("1_dw8em")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r4dgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghkou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkawy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcmmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aoivm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75rrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dc3y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvf5h"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_r4dgy")
+autoplay = "default"
+frame_progress = 0.524004
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cvf5h")

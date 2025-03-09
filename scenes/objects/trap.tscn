@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://0jpcedidcmqu"]
+
+[ext_resource type="Texture2D" uid="uid://b7uycvk2uas8e" path="res://assets/powerStation/4 Animated objects/Trap.png" id="1_ecrvj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hrlc0"]
+atlas = ExtResource("1_ecrvj")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sv7iw"]
+atlas = ExtResource("1_ecrvj")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a35md"]
+atlas = ExtResource("1_ecrvj")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1k0p"]
+atlas = ExtResource("1_ecrvj")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ay78i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hrlc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sv7iw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a35md")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1k0p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ba2xv"]
+size = Vector2(48, 48)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ay78i")
+frame_progress = 0.88944
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_ba2xv")
